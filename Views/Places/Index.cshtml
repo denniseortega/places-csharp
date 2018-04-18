@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Places</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body
+    <div class = "container">
+    <h1>Places You've been to:</h1>
+    <ul>
+      @foreach(var place in Model)
+      {
+        <li><a href='/places/@place.GetId()'>@place.GetCity()</a></li>
+      }
+    </ul>
+    <p><a href="/places/new">Add another place</a></p>
+        <form action="/places/delete" method="post">
+          <button type="submit" name="button" class='btn btn-danger'>Clear All  Places</button>
+        </form>
+    </div>
+  </body>
+</html>

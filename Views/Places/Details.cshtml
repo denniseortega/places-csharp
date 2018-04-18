@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Places</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <div class = "container">
+      <h1>@Model.GetCity()</h1>
+      <p>@Model.GetDescription()</p>
+      <img src = "@Model.GetImageUrl()" width = "50%" height="auto"/>
+
+      <a href='/places/new'>Add another place</a>
+      <a href='/places'>View all places</a>
+    </div>
+  </body>
+</html>
